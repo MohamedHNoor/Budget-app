@@ -1,0 +1,16 @@
+<div id="<%= dom_id group %>" class="shadow p-3 mb-3 bg-body-tertiary rounded">
+<%= link_to group_path(group), class: "d-flex align-items-center justify-content-between nav-link" do %>
+  <% if group.icon.attached? %>
+    <%= image_tag url_for(group.icon), class: "img-fluid img-thumbnail w-25" %>
+  <% end %>
+
+  <div>
+    <h3><%= group.name %></h3>
+    <%= group.created_at.strftime("%d %b %Y") %>
+  </div>
+  <div>
+       $<%= group.entities.sum(:amount) %>
+    </div>
+    
+  <% end %>
+</div>
