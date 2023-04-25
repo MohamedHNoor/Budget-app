@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+body {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
