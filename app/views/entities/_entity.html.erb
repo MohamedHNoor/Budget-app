@@ -1,0 +1,16 @@
+<div id="<%= dom_id entity %>" class="shadow p-3 mb-3 bg-body-tertiary rounded">
+  <%= link_to entity, class: "nav-link" do %>
+    <div class="d-flex justify-content-between align-items-center">
+      <p>
+        <strong>Name:</strong>
+        <%= entity.name %>
+      </p>
+
+      <p>
+        <strong>Amount:</strong>
+        $<%= entity.amount %>
+      </p>
+    </div>
+<% end %>
+  
+</div>

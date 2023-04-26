@@ -1,0 +1,17 @@
+
+<div class="shadow p-3 mb-3" id="<%= dom_id group %>">
+  <%= link_to group_path(group), class: "d-flex align-items-center gap-4 w-full bg-white p-3 nav-link" do%>
+  <% if group.icon.attached? %>
+    <%= image_tag url_for(group.icon), class: "img-fluid img-thumbnail w-25" %>
+    <% end %>
+    <div class=" d-flex flex-column justify-content-between flex-fill">
+      <div class="d-flex justify-content-between align-items-center w-full">
+        <h3 class="fs-1 text-secondary "><%= group.name %></h3>
+        <div class="fw-bold">
+          $<%= group.entities.sum(:amount) %>
+        </div>
+      </div>
+      <p class="opacity-25 align-self-start m-0"><%= group.created_at.strftime("%d %b %Y") %></p>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,12 @@
+<%= render "shared/transactionsnavbar" %>
+<p style="color: green"><%= notice %></p>
+
+<div id="entities">
+  <% @entities.each do |entity| %>
+    <%= render entity %>
+  <% end %>
+</div>
+
+<div class="d-flex flex-column fixed-bottom align-items-center justify-content-center text-center bg-success w-100 p-3">
+  <%= link_to "Add a new Transaction", new_entity_path, class: "text-white w-100  nav-link border border-white  p-2" %>
+</div>
