@@ -1,9 +1,12 @@
 <%= render "shared/categoriesnavbar" %>
 <p style="color: green"><%= notice %></p>
 
+
 <div id="groups">
   <% @groups.each do |group| %>
-    <%= render group %>
+    <% if current_user.id == group.user_id %>
+      <%= render group %>
+    <% end %>
   <% end %>
 </div>
 
