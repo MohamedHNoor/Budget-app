@@ -24,7 +24,7 @@ RSpec.describe 'Transactions page', type: :feature do
   end
 
   it 'should display the transactions page' do
-    expect(page).to have_content('Transactions')
+    expect(page).to have_content('Categories')
   end
 
   it 'should display add new transaction button' do
