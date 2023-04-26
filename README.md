@@ -37,9 +37,7 @@
 
 ## video demo 🎥
 
-
 https://user-images.githubusercontent.com/97671133/234506964-443990ab-8222-44c9-9ff0-9d4f1ad26f27.mov
-
 
 ## Render Deploy 🚀
 
