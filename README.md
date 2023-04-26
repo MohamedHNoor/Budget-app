@@ -12,7 +12,6 @@
 - [Budget App ](#budget-app-)
   - [video demo 🎥](#video-demo-)
   - [Render Deploy 🚀](#render-deploy-)
-  - [Project documentation 🎦](#project-documentation-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
   - [Key Features ](#key-features-)
@@ -42,10 +41,6 @@ https://user-images.githubusercontent.com/97671133/234506964-443990ab-8222-44c9-
 ## Render Deploy 🚀
 
 [Live demo here](https://budget-app-wtfx.onrender.com/)
-
-## Project documentation 🎦
-
-[See the description here]()
 
 ## 🛠 Built With <a name="built-with"></a>
 
