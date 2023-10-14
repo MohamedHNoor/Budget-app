@@ -1,0 +1,42 @@
+<header class="bg-primary text-white sticky-top">
+  <nav class="d-flex justify-content-between p-3 align-items-center text-center">   
+    <a href='/'><i class="fa-solid fa-arrow-left fs-1 text-white"></i></a>
+    <h2 class="m-0 p-0">Transactions</h2>
+    <i class="fa-solid fa-magnifying-glass text-white fs-1"></i>
+  </nav> 
+</header>
+
+<p style="color: green"><%= notice %></p>
+<% if current_user.id == @group.user_id %>
+  <div class="d-flex flex-column">
+    <%= render @group %>
+    <div class="mx-auto">
+      <%= button_to "Remove category", @group, method: :delete, class: "btn btn-outline-primary"%>
+    </div> 
+  </div>
+<% end %>
+
+<h2 class="text-center mt-3">Transactions</h2>
+<div class="">
+  <% @group.entities.each do |entity| %>
+  <% if current_user.id == entity.user_id %>
+      <div class="d-flex flex-column shadow p-3 mb-5 bg-body-tertiary rounded">
+        <div class="d-flex justify-content-between align-items-center">
+          <h3><%= entity.name %></h3>
+          <p>$<%= entity.amount %></p>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="opacity-50"><%= entity.created_at.strftime("%d %b %Y") %></span>
+          <%= button_to entity, method: :delete, class: "btn btn-link text-danger" do %>
+          <i class="fa-solid fa-trash-can"></i>
+          <% end %>
+        </div>
+        
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="d-flex flex-column fixed-bottom align-items-center justify-content-center text-center bg-success w-100 p-3">
+  <%= link_to "Add a new Transaction", new_entity_path, class: "text-white w-100  nav-link border border-white  p-2" %>
+</div>

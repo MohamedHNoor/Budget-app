@@ -1,0 +1,18 @@
+<header class="bg-primary text-white sticky-top">
+  <nav class="d-flex justify-content-between p-3 align-items-center text-center">   
+    <a href="<%= entities_path %>"><i class="fa-solid fa-arrow-left fs-1 text-white"></i></a>
+    <h2 class="m-0 p-0">Transactions</h2>
+    <i class="fa-solid fa-magnifying-glass text-white fs-1"></i>
+  </nav> 
+</header>
+
+<p style="color: green"><%= notice %></p>
+
+<%= render @entity %>
+
+<div class="d-flex flex-column justify-content-between align-items-center p-3">
+  <div>
+    <%= button_to "Destroy this entity", @entity, method: :delete, class: "btn btn-link link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" %>
+  </div>
+  
+</div>
