@@ -1,9 +1,15 @@
-<div class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh;" id="home">
-  <h1 class="fixed-center">
-    Budget App
-  </h1>
-  <div class="d-flex flex-column fixed-bottom align-items-center justify-content-center text-center">
-    <%= link_to "LOG IN", new_user_session_path, class: "text-white bg-primary w-100 p-3 nav-link" %>
-    <%= link_to "SIGN UP", new_user_registration_path, class: "nav-link p-3 w-100" %>
+<header class="header-container">
+  <h1 class="text-center mb-4">Budget App</h1>
+  <div class=" d-md-none fixed-bottom position-fixed mx-3" id="mobile-btns">
+    <div class="d-grid gap-2">
+      <%= link_to "LOG IN", new_user_session_path, class: "btn btn-primary" %>
+      <%= link_to "SIGN UP", new_user_registration_path, class: "btn btn-outline-secondary" %>
+    </div>
   </div>
-</div>
+  <div class="mb-3 mx-3 d-none d-md-block ">
+    <div class="d-grid gap-2">
+      <%= link_to "LOG IN", new_user_session_path, class: "btn btn-primary" %>
+      <%= link_to "SIGN UP", new_user_registration_path, class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+</header>
