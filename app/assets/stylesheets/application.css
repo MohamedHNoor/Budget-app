@@ -16,4 +16,18 @@
 body {
   overflow-y: scroll;
   scroll-behavior: smooth;
+  /* min-height: 100vh;
+  display: flex;
+  flex-direction: column; */
+}
+
+@media (min-width: 500px) {
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: 0 auto;
+    height: 100vh;
+    justify-content: center;
+  }
 }
